@@ -9,7 +9,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt> libgl1-mesa-glx libglib2.0-0; [ -f requirements.txt ] && pip3 install --user -r requirements.txt; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
+  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo xargs apt install -y <packages.txt> && [ -f requirements.txt ] && pip3 install --user -r requirements.txt && pip3 install --user streamlit",
   "postAttachCommand": "streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false",
   "forwardPorts": [8501],
   "portsAttributes": {
