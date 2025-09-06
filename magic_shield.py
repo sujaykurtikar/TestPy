@@ -5,11 +5,6 @@ import numpy as np
 import time
 import math
 import os
-import os
-
-# Force OpenCV to avoid GUI/OpenGL dependencies
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"  # optional for video capture on Windows
-os.environ["OPENCV_OPENGL"] = "0"                 # disable OpenGL backend
 
 mp_hands = mp.solutions.hands
 

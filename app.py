@@ -6,11 +6,6 @@ import tempfile
 import os
 import subprocess
 from magic_shield import MagicShield
-import os
-
-# Force OpenCV to avoid GUI/OpenGL dependencies
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"  # optional for video capture on Windows
-os.environ["OPENCV_OPENGL"] = "0"                 # disable OpenGL backend
 
 shield = MagicShield()
 
