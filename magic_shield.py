@@ -64,7 +64,7 @@ class MagicShield:
         self.glyph = None
         if os.path.exists("magic_circle.png"):
             self.glyph = cv2.imread("magic_circle.png", cv2.IMREAD_UNCHANGED)
-
+ 
     def process(self, frame):
         height, width = frame.shape[:2]
         rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
