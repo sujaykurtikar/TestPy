@@ -78,7 +78,7 @@ if st.button("📸 Capture Snapshot"):
         _, buffer = cv2.imencode(".png", frame_bgr)
 
         st.success("✅ Snapshot captured!")
-        st.image(frame_rgb, caption="Captured Snapshot", use_container_width=True)
+        st.image(frame_rgb, caption="Captured Snapshot", width="stretch")
 
         st.download_button(
             label="⬇️ Download Snapshot",
