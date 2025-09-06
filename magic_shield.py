@@ -1,10 +1,14 @@
 # magic_shield.py
-import cv2
 import mediapipe as mp
 import numpy as np
 import time
 import math
 import os
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+os.environ["OPENCV_VIDEOIO_PRIORITY_FFMPEG"] = "1"
+os.environ["OPENCV_OPENGL_RUNTIME"] = "0"  # disable OpenGL
+import cv2
+
 
 mp_hands = mp.solutions.hands
 

@@ -1,9 +1,13 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 import av
-import cv2
 import tempfile
 import os
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+os.environ["OPENCV_VIDEOIO_PRIORITY_FFMPEG"] = "1"
+os.environ["OPENCV_OPENGL_RUNTIME"] = "0"  # disable OpenGL
+import cv2
+
 import subprocess
 from magic_shield import MagicShield
 
